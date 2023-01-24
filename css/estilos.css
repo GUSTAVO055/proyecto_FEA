@@ -1,0 +1,350 @@
+
+/* Cuando la pantalla tiene una resolucion de ancho inferior
+a 550px, muestra el icono (ubicado en un item de una lista) 
+que despliega un menu para dispositivos móviles y oculta el menú 
+horizontal. Clases involucradas: 
+-- .menu
+-- .iconoMenu*/
+@media screen and (max-width: 550px) {
+    .menu li:not(:first-child) {display: none;}
+    .menu li.iconoMenu {
+      float: right;
+      display: block;
+    }
+	
+  }
+  
+  /*La clase responsive es añadida la barra de navegación, 
+  para que muestre el menú en dispositivos móviles utilizando
+  la propiedad de posición para alinear de diferente manera
+  los elementos de este.
+  Ademas, configura los elementos del menú para que se muestren
+  a lo largo del dispositvo (ej: alineados a la derecha.) 
+  Clases involucradas: 
+  -- .menu
+  -- .responsive (subclase creada desde javascript funciones.js) */
+  @media screen and (max-width: 550px) {
+    .menu.responsive {position: relative;}
+    .menu.responsive li.iconoMenu {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menu.responsive li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+/*Configuración dinámica que permite al menú adaptarse
+al ancho de pantalla en cuanto a la forma en la que muestra
+este usando la propiedad display.
+Clases involucradas: 
+--.menu
+--.iconoMenu
+-- los inputs t textarea
+--.submenu*/
+ @media only screen and (max-width : 550px) and (min-width : 0px){
+	.menu{
+		display: block;
+
+	}
+	.iconoMenu{
+		display: block;
+	}
+	input,textarea{
+		width: 70%;
+	}
+	.menu li:hover .submenu{
+		position: relative;
+	}
+	
+	
+}
+@media only screen and (min-width : 551px){
+	.menu{
+		display: flex;
+	
+	}
+	.iconoMenu{
+		display: none;
+	}
+	input,textarea{
+		width: 50%;
+	}
+	.menu li:hover .submenu{
+		position: absolute;
+	}
+	
+	
+	
+} 
+
+
+/*Clase que permite configurar los tipos de habilidades
+que muestra el div o división lógica relacionada con las
+habilidades que presenta el Curriculum de la persona.
+Además, configura el margen de los subitems de manera
+automática. */
+.tiposHabilidades{
+	font-size: x-large;
+	font-weight: bolder;
+	list-style-type: square;
+}
+.tiposHabilidades > ul > li {
+
+	margin-inline-start: auto;
+}
+
+/* ----------------------------------------------------------------
+Configuracion de elementos de HTML que son utilizados
+en el sitio Web.
+------------------------------------------------------------------*/
+
+/* Se configuran los encabezados en cuanto a
+tamaño de letra y alineamiento principalmente. */
+h1{
+	text-align: center;
+	font-size: 50px;
+	font-weight: bolder;
+}
+h2{
+	text-align: center;
+	font-size: 35px;
+}
+h3{
+	text-align: left;
+	font-size: 33px;
+	font-weight: bolder;
+}
+
+/* Permite alterar resaltando con ciertas características
+los elementos details y summary al posicionar el puntero
+del mouse sobre estos. */
+summary:hover{
+	
+	border-radius: 45px;
+	font-style: italic;
+	font-weight: bolder;
+	cursor:pointer;
+
+}
+div{
+	margin: 10px;
+	padding: 10px;
+	background-color: darkcyan;
+	border-radius: 20px;
+}
+
+/* Confguracion que afecta al cuerpo de las páginas
+relacionadas con el sitio web */
+body{ 
+	
+	min-width: 420px;
+    max-width: 100%;
+	background-color: black;
+
+} 
+
+/* Confguracion que afecta de manera general a las páginas
+relacionadas con el sitio web */
+* {
+    font-family: 'Sofia Sans', sans-serif;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+form{
+	
+	border-radius: 45px;
+	padding: 20px; 
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+p{
+	margin: 10px;
+	padding: 15px;
+	text-align: justify;
+}
+header{
+	padding: 30px;
+	background-color: black;
+	text-align: center;
+
+}
+
+aside{
+	background-color: cadetblue;
+	padding: 10px;
+	flex: 40%;
+}
+section{
+	flex: 60%;
+	background-color: cadetblue;
+	padding: 10px;
+
+}
+footer{
+	padding: 10px;
+	margin: 10px;
+	background-color: cadetblue;
+	text-align: center; 
+}
+
+hr{
+	border-style: solid;
+}
+
+/* Clase que permite configurar la división logica
+que muestra las secciones de la página web y facilita
+la implementtación de Responsive Design o tecnica de
+diseño adaptativo a todos los dispositivos que visiten
+el sitio web. */
+.info{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+/* Clase que permite configurar la imagen del
+profesional que se muestra en el sitio, la misma
+se muestra en la pagina principal y la de contacto*/
+.imagen_cv{
+	
+  	border-radius: 90px;
+	border-style: solid;
+	
+}
+
+/* Clase que permite configurar los items que se presentan
+en la pagina principal, en cuanto a las habilidades,
+aptitudes, idiomas, experiencia y educación */
+.items_info{
+	list-style: circle;
+	margin-left: 40px;
+}
+.items_info > li > ul > li {
+	list-style: circle;
+	margin-left: 50px;
+}
+
+
+/* Clase que altera la letra modificando su
+propiedad cada vez que el usuario ubica el puntero
+mouse sobre un dato de los datos personales */
+.dato:hover{
+	
+	font-weight: bolder;
+}
+
+
+/* Clase que configura el tamaño de los íconos 
+mostrados en la división relacionada con los 
+datos personales. Los mismos hacen referencia a
+profesión, nacionalidad, fecha de nacimiento, etc. */
+.iconos_per{
+	width: 30px;
+	height: 30px;
+}
+
+/*---------------------------------------------------------------
+Clases vinculadas con el menu de navegación
+----------------------------------------------------------------*/
+
+/* Clase que configura el estilo del menú horizontal de la página
+principal */
+.menu{
+	background-color:darkcyan;
+	list-style: none;
+	justify-content: space-around;
+	border-radius: 45px;
+	
+}
+
+/* Clase que configura el estilo de los enlaces vinculados
+con el menú prncipal */
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+
+}
+/* Clase que configura el estilo de los items de las
+lstas desordenadas del menu al pasar el puntero del
+mouse por cada una de estas */
+.menu > li:hover{
+	background-color:darkolivegreen;
+	color: black;
+}
+/* Clase que configura el estilo del submenu que se
+desplega cada vez que el usuario posiciona el puntero
+del mouse en un elemento del menu principal*/
+.submenu{
+	
+	display: none;
+	list-style: none;
+	background-color: darkseagreen;
+	font-size: 24px;
+	z-index: 50;
+	color: black;
+	
+}
+/* Clase que permite hacer visible el submenu
+cada vez que el usuario posiciona el puntero
+sobre un elemento del menu principal. */
+.menu li:hover .submenu{
+	display:block;
+}
+
+/* Clase que configura el estilo de cada item del submenu 
+cada vez que el usuario posiciona el puntero del mouse en 
+un elemento de este*/
+.submenu li:hover{
+	background-color:darkslategrey;
+}
+/* Clase que configura el estilo de cada enlace del submenu */
+.submenu  li  a{
+	display: block;
+	color: black;
+	padding: 15px 15px 15px 15px;
+	text-decoration: none;
+	
+}  
+
+/* Clase que configura el estilo del icono mostrado
+cada vez que se cambia al menu para dispositivos móviles
+o que tiene una resolución de un ancho limitado */
+.iconoMenu{
+	
+	text-align: left;
+	float: inline-end;
+
+}
+/* Identificador que permite configurar el estilo
+del boton que permite desplegar el menú ante el uso
+de dispositivos moviles o cuando el ancho de pantalla
+este limitado. */
+#btnMenu{
+	background-color: darkcyan;
+	border-style: solid;
+	padding: 5px;
+	font-weight: bolder;
+}
+
+/* Clase que configura los elementos vinculados con
+el formulario  de contacto. Estos hacen referencia
+a los inputs y los labels. */
+.elementos_form{
+	
+	margin: 10px;
+	min-width: 280px;
+
+}
+
