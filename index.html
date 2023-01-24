@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Tipografá importada de Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap" rel="stylesheet">
+        <!-- Ícono que se muestra en la pestaña del navegador -->
+        <link rel="icon" href="icons/user-regular.svg" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Título que aparece en la pestaña del navegador -->
+        <title>Curriculum Vitae Online</title>
+        <!-- Enlace que vincula a la página web con los estilos aplicados
+        a los elementos -->
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body >
+        <!--Busca e importa una tipografíqa de Google Fonts-->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap');
+        </style>
+        
+        <!-- Barra de navegación que muestra y permite acceder a sitios
+        solicitados por el supuesto usuario y al formulario usado para
+        contactarse con este. 
+        El mismo está realizado con listas desordenadas y hojas de estilo.-->
+        <nav>
+            <ul class="menu" id="menuCV">
+                <li id="btnMenu" href="javascript:void(0);" class="iconoMenu" onclick="mostrarMenu()">
+                    <img class="iconos_per" src="icons/bars-solid.svg" />Menú
+                </li>
+                <li class="active"> <a href="index.html">Inicio</a></li>
+                <li> <a href="#">Me interesa ...</a>
+                    <ul class="submenu">
+                        <li><a target="_blank" href="http://www.ticmas.com">Ticmas</a></li>
+                        <li><a target="_blank" href="https://www.colabogados.org.ar">Colegio de Abogados de la Ciudad</a></li>
+                        <li><a target="_blank" href="https://colproba.org.ar/j/">Colegio de Abogados de la Provincia</a></li>
+                        <li><a target="_blank" href="https://www.cpacf.org.ar">Colegio Público</a></li>
+                        <li><a target="_blank" href="https://estudiojuridicocarballes.com.ar">Estudio Jurídico</a></li>
+                        <li><a target="_blank" href="https://www.uba.ar/#/">UBA</a></li>
+                        <li><a target="_blank" href="http://www.derecho.uba.ar">Facultad de Derecho - UBA</a></li>
+                    </ul>
+                </li>
+                <li> <a href="#">Organizaciones</a>
+                    <ul class="submenu">
+                        <li><a target="_blank" href="https://aaba.org.ar">AABA</a></li>
+                        <li><a target="_blank" href="https://www.idealist.org/es/ong/80bb82531a4d42a7ae0f22ec18d17cd8-innocence-project-argentina-florida">Idealist</a></li>
+                    </ul>
+                </li>
+                
+                <li> <a href="contacto.html">Contacto</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+
+
+        <!-- Encabezamiento que muestra el título que hace referencia
+        al proposito por el que fué realizada el sitio web -->
+        <header style="background-color: black;justify-content: center;">         
+            <h2 style="color: white;font-size: 45px;">Curriculum Vitae</h2>          
+        </header>
+
+        <!-- División lógica que muestra el nombre del profesional
+        o la persona a la que corresponde el CV -->
+        <div class="info">
+            <aside >
+                <h1>Diego Ramiro Mercado</h1>
+            </aside>
+        </div>
+        
+        <!-- División que permite mostrar toda la información fundamental
+        relacionada con el profesional. La misma hace referencia a la imagen,
+        los datos personales, el resumen del CV, las habilidades y aptitudes
+        que tiene la persona a la que pertenece el CV. Además, utiliza la 
+        clase info que tiene configurada propedades para la aplicación de
+        la técnica de Responsive Design-->
+        <div class="info" >      
+            <aside >
+                <div style="text-align: center;">
+                    <img width="200px" heigth="200px" class="imagen_cv" src="img/foto.png" alt="Foto de Diego">
+                </div>
+                <h3 style="margin-left: 10px;">Datos Personales</h3>
+                <hr>
+                <div>       
+                             
+                    <img class="iconos_per" src="icons/user-tie-solid.svg" /><span class="dato"> Abogado</span><br>     
+                    <img class="iconos_per" src="icons/earth-americas-solid.svg" /><span class="dato"> Argentino, Buenos Aires, Capital Federal</span><br>
+                    <img class="iconos_per" src="icons/calendar-days-regular.svg" /><span class="dato"> 18/09/1972</span><br>      
+                    <img class="iconos_per" src="icons/map-location-solid.svg" /><span class="dato"> Buenos Aires, Argentina</span><br>
+                    <img class="iconos_per" src="icons/phone-solid.svg" /><span class="dato"> 02978665439</span><br>
+                    <img class="iconos_per" src="icons/envelope-solid.svg" /><a class="dato" href="mailto:diego_mercado_2022@gmail.com"> Correo Gmail</a><br>
+                    <img class="iconos_per" src="icons/facebook.svg" /><a class="dato" target="_blank" href="https://www.facebook.com/people/Argentina-Programa-40/100084956654182/"> Argentina Programa 4.0</a><br>
+                    <img class="iconos_per" src="icons/linkedin.svg" /><a class="dato" target="_blank" href="https://ar.linkedin.com/school/programa-argentina/"> Argentina Programa</a><br>
+                    <img class="iconos_per" src="icons/twitter.svg" /><a class="dato" target="_blank" href="https://mobile.twitter.com/argprograma"> Argentina Programa</a><br>
+                </div>
+                
+                <div>
+                    <details>
+                    
+                        <summary>Resumen personal</summary>  
+                         
+                        <p>Abogado con muchos años de experiencia que 
+                            ejerce la docencia universitaria. Se enfoca en
+                            resolver problemas de la población, tanto en el 
+                            ámbito público como privado, relacionados
+                            mayormente con el derecho laboral y derecho 
+                            administrativo, mediante todo tipo de medio 
+                            de comunicación. Asegurándose de que el lenguaje 
+                            utilizado sea lo más entendible para poder ayudar de 
+                            la mejor manera posible.
+                        </p>
+                    </details>
+                
+                </div>
+                <div>
+                    <details>
+                    
+                    <summary>Habilidades</summary>  
+                    
+                    <ul class="items_info">
+                        <li> <strong>Habilidades sociales</strong> 
+                        <ul>    
+                            <li>Direccion de grupos de grandes cantidades de personas.</li>
+                            <li>Capacidad para dar soluciones rápidas a situaciones cotidianas.</li>
+                        </ul>
+                        </li>
+                        <li > <strong>Habilidades técnicas</strong> 
+                        <ul>    
+                            <li>Manejo de herramientas de <q> Operador de Informática </q></li>
+                            <li>Conocimiento del uso de Redes Sociales y Aplicaciones Web en general.</li>
+                            <li>Coocimientos básicos en reparación de PC.</li>
+                        </ul>
+                        </li>
+                        <li><strong>Habilidades políticas</strong>
+                            <ul>    
+                                <li>Capacidad y conocimientod para motivar a otras personas.</li>
+                                <li>Capacidad para crear grupos que persigan una causa.</li>
+                            </ul>
+                        </li>
+                        
+                    </details>
+                </div>
+
+                <div>
+                    <details>
+                    
+                    <summary>Aptitudes</summary>  
+                    <!-- <summary><h3>Experiencia</h3></summary>   -->
+                    <ul class="items_info">
+                        <li>Liderazgo.</li>
+                        <li>Empatía.</li>
+                        <li>Compromiso.</li>
+                        <li>Capacidad para la docencia.</li>
+                    </ul>
+                    </details>
+                </div>
+                <div>
+                    <details>
+                    
+                    <summary>Idiomas</summary>  
+                    <!-- <summary><h3>Experiencia</h3></summary>   -->
+                    <ul class="items_info">
+                        <li>Ingles: Avanzado</li>
+                        <li>Frances: Intermedio</li>
+                        <li>Alemán: Intermedio</li>
+                    </ul>
+                    </details>
+                </div>
+
+            </aside>
+        
+            <!-- Seccion que muestra el perfil, la experiencia, y la educación
+                del profesional. -->
+            <section >
+                <h3>Perfil</h3>
+                <hr>
+                <p>Abogado enfocado por la profesión. Con una solida
+                    formación en el derecho laboral, derecho administrativo,
+                     derecho penal. Experiencia en docencia de nivel universitario y
+                     capacidad para comunicarme con lenguaje sensillo, para que la ley
+                     sea comprensible para todos. Además, interesado y capacitado
+                     por las nuevas tecnologías de información.
+                </p>
+                    
+                <h3>Experiencia</h3>
+                <hr>
+                    <ul class="items_info">
+                        <li><strong>Profesor de <q>Derecho del Trabajo y la Seguridad Social</q> 
+                            Carrera de Abogacía - Mayo 2008, Actualidad</strong> </li> 
+                        <span><em><a href="http://www.derecho.uba.ar">Facultad de Derecho</a>, <a href="https://www.uba.ar/#/">Universidad de Buenos Aires</a>, Buenos Aires</em></span>
+                        <li><strong>Abogado - Noviembre 2013, Actualidad</strong> </li> 
+                        <span><em>Estudio Jurídico: <a href="https://estudiojuridicocarballes.com.ar"><q>Carballes</q></a>, Buenos Aires</em></span><br>
+                        <p>Me desempeño actualmente en temas relacionados con el ámbito laboral, como:
+                            ley de contrato de trabajo, los convenios colectivos (CCT), los estatutos 
+                            profesionales, los laudos arbitrales voluntarios y obligatorios, 
+                            los convenios de la Organización Internacional del Trabajo (OIT), 
+                            la voluntad de las partes, y los usos y costumbres empresarios.
+                        </p>
+                        
+                        <li><strong>Abogado - Noviembre 2007, Abril 2012</strong> </li> 
+                        <span><em>Estudio Jurídico: Gonzales Abogados, Buenos Aires</em></span><br>
+                        <p>Adquirí una amplia experiencia en la práctica consultiva como
+                            en la litigación del derecho laboral. Con sentido del idealismo
+                            y la moralidad se resolvieron conflictos entre empleados y patrones.
+                            Los aspectos del derecho laboral que abarcaron los casos fueron: el despido,
+                            las condiciones laborales, la incapacidad laboral.
+                        </p>
+                        <li><strong>Abogado - Noviembre 2000, Abril 2012</strong> </li> 
+                        <span><em> Jefatura de Gobierno de la ciudad de Buenos Aires, Secretaria Legal y Técnica, Buenos Aires</em></span>  
+                        <p>Como miembro del equipo apoyé al Gobierno en la resolución de 
+                            cuestiones jurídicas,redacción y seguimiento de expedientes,
+                            investigación jurisprudencial, y elaboración de dictámenes
+                            en base a ello. Elaborar las declaraciones en proyectos de ley
+                            y documentos oficiales.
+                        </p>
+                    </ul>
+                <h3>Educación</h3>
+                <hr>
+                    <ul class="items_info">
+                        <ul>
+                            <li><strong><q>Maestría en Derecho Laboral</q> - Mayo 2005, Noviembre 2014</strong> </li> 
+                            <span><em><a href="https://www.uba.ar/#/">Universidad de Buenos Aires</a>, Buenos Aires</em></span> 
+                            <li><strong>Carrera de <q>Abogacía</q> - Marzo 1991, Diciembre 1999</strong> </li> 
+                            <span><em><a href="https://www.uba.ar/#/">Universidad de Buenos Aires</a>, Buenos Aires</em> </span>  
+                        </ul>
+                        
+                    </ul>
+            </section>
+        </div>
+        <!-- Pié de página donde puede verse la información relacionada con el creador del
+        sitio web -->
+        <footer>
+            <div style="font-size: 10px; text-align: center;">
+                <span>Creado por:<a href="mailto:gustavo_ormeno_055@gmail.com">Gustavo</a></span>
+            <div>
+        </footer>
+
+        <!-- Enlace al archivo que contiene las funciones vinculadas con el 
+        menú de navegación -->
+        <script src="js/funciones.js"></script>
+
+        
+    </body>
+</html>

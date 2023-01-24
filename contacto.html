@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Tipografá importada de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Ícono que se muestra en la pestaña del navegador -->
+    <link rel="icon" href="icons/user-regular.svg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Contacto</title>
+    <!-- Hoja de estilo vinculada a la página -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Barra de navegación que muestra un menu con la opción
+    para volver a la página principal donde se muestra el CV -->
+    <nav>
+        <ul class="menu" style="display: block;position: relative;">
+            <li>
+                <a href="index.html">Principal</a>
+            </li>
+        </ul> 
+    </nav>
+    <!-- Encabezado compuesto por el nombre del profesional,
+    título del mismo e imagen de este. -->
+    <header>
+        <div >
+                <div>
+                    <h1>Diego Ramiro Mercado</h1>
+                    <h2>Abogado</h2>
+                </div>
+                <div>
+                    <a href="index.html"><img class="imagen_cv" width="150px" height="150px" src="img/foto.png" alt="Foto de Diego Ramiro Mercado" ></a>
+                </div>       
+        </div>
+    </header>
+
+    
+    <!-- Sección que muestra el formulario de contacto y sus
+    entradas como cajas de texto y áreas de texto con sus
+    correspondientes limitaciones -->
+    <section>
+        <!-- División logica usada para mostrar mensajes de error 
+        o acierto en cuanto al envío de información para contactarse
+        con la persona vinculada al sitio-->
+        <div >
+            <p id="errMensaje" style="border-radius: 45px;display: none;"></p>
+        </div>
+        <!-- División que contiene las entradas de texto y otros elementos
+        usados para la obtención de información de quienn desea contactarse
+        con la persona vinculada al sitio web.-->
+        <div>
+            <p style="font-weight: bolder;font-size: 40px;">Formulario de contacto:</p>
+            <form  method="get" class="form" style="background-image: url(img/atencionCliente.png);">
+                
+                        <label class="elementos_form">Nombre:</label><br>
+                        <input placeholder="Juan Acerez" maxlength="24" class="elementos_form"type="text" name="txtNombre" id="txtNombre"><br>
+                        <label class="elementos_form">Teléfono:</label><br>
+                        <input placeholder="02999039833" multiple="true" maxlength="24" class="elementos_form" type="tel" name="txtTelefono" id="txtTelefono"><br>
+                        <label class="elementos_form">Email:  </label><br>
+                        <input placeholder="contacto@correo.com" multiple="true" maxlength="30" class="elementos_form" type="email" name="txtEmail" id="txtEmail"><br>
+                        <label class="elementos_form">Asunto: </label><br>
+                        <textarea placeholder="Consulta sobre proyecto educativo. (máximo 200 caracteres)" id="txtComentario" maxlength="200" class="elementos_form"  rows="10"></textarea>
+                        <br>
+                    
+                <input type="button" id="btnEnviar" value=" Enviar ">
+
+            </form>
+        </div>
+        <div></div>
+      
+    </section>
+
+    <!-- Código que permite enlazar el formulario a las funciones de Javascript -->
+    <script src="js/funciones.js"></script>
+    
+</body>
+</html>
